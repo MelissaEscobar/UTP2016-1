@@ -1,2 +1,6 @@
 # UTP2016-1
-Contains Homeworks, Codes of Various Courses of my University UTP 2016. Just the official Repo.
+Contains Homeworks, Codes of Various Courses taken at Universidad Tecnologica de Pereira 2016-1.
+
+- Statistics
+- Computer Programming 2
+- Digital Electronics Laboratory

@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+% Modified by: Hector F. Jimenez S.
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%---------------------------------------
+\documentclass{article}
+\usepackage[version=3]{mhchem}          % Package for chemical equation typesetting
+\usepackage{siunitx}                    % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx}                   % Required for the inclusion of images
+\usepackage{natbib}                     % Required to change bibliography style to APA
+\usepackage{amsmath}                    % Required for some math elements
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}             %
+
+\setlength\parindent{0pt}               % Removes all indentation from paragraphs
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+\usepackage{times}
+%------------------------
+%	DOCUMENT INFORMATION
+%------------------------
+\title{Desarrollo de un Controlador de Tráfico\\ Usando FPGA's \\ Laboratorio de Electrónica Digital\\Modulo: 1} % Title
+\author{Héctor F. \textsc{Jiménez Saldarriaga}\\ hfjimenez@utp.edu.co} % Author name
+\date{\today}                           % Date for the report
+\begin{document}
+\maketitle                              % Insert the title, author and date
+\begin{center}
+\begin{tabular}{l r}
+Fecha de Entrega: & Febrero 24, 2016 \\
+Profesor: & Ing.Msc(c) Ramiro Andres Barrios Valencia
+\end{tabular}
+\end{center}
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+%------------------
+%	SECTION 1
+%------------------
+\section{Objectivos}
+\begin{enumerate}
+  \item Fortalecer y poner en práctica la teoria de circuitos combinacionales para la solución al problema.
+  \item Fortalecer el desarrllo de sistemas digitales, utilizando el lenguaje \emph{VHDL} y su entorno de desarrollo.
+  \item Identificar la arquitectura y el hardware integrado de la placa de desarrollo NEXYS2.
+  \item Implementar en lenguaje VHDL un modúlo que permita la detección correcta de los estados lógicos de los botones presentes en la fpga modelo \emph{NEXYS 2}\footnote{Datasheet Oficial de la placa: http://reference.digilentinc.com/_media/nexys:nexys2:nexys2_rm.pdf}
+\end{enumerate}
+
+% If you have more than one objective, uncomment the below:
+%\begin{description}
+%\item[First Objective] \hfill \\
+%Objective 1 text
+%\item[Second Objective] \hfill \\
+%Objective 2 text
+%\end{description}
+
+\section{Marco Teorico}
+
+\subsubsection{Arquitectura del Modelo\emph{NEXYS 2}}
+El modelo \emph{NEXYS 2} esta governado 
+%------------------
+%	SECTION 2
+%------------------
+\section{Simulación}
+Para poner a prueba el diseño de este modo se utilizo un simulador, el cual arrojara en detalle los resultados del modulo funcional.
+%------------------
+%	SECTION 3
+%------------------
+\section{Prácticas Experimentales}
+Poner a qui la practica realizada en laboratorio.
+%------------------
+%	SECTION 3
+%------------------
+\section{Explicación Código VHDL}
+Because of this reaction, the required ratio is the atomic weight of magnesium: \SI{16.00}{\gram} of oxygen as experimental mass of Mg: experimental mass of oxygen or $\frac{x}{1.31}=\frac{16}{0.87}$ from which, $M_{\ce{Mg}} = 16.00 \times \frac{1.31}{0.87} = 24.1 = \SI{24}{\gram\per\mole}$ (to two significant figures).
+
+\section{Problemas Hallados en el Desarrollo}
+The atomic weight of magnesium is concluded to be \SI{24}{\gram\per\mol}, as determined by the stoichiometry of its chemical combination with oxygen. This result is in agreement with the accepted value.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.65\textwidth]{placeholder} % Include the image placeholder.png
+\caption{Figure caption.}
+\end{center}
+\end{figure}
+%------------------
+%	SECTION 5
+%------------------
+\section{Resultados y Conclusiones}
+\begin{enumerate}
+\begin{item}
+The \emph{atomic weight of an element} is the relative weight of one of its atoms compared to C-12 with a weight of 12.0000000$\ldots$, hydrogen with a weight of 1.008, to oxygen with a weight of 16.00. Atomic weight is also the average weight of all the atoms of that element as they occur in nature.
+\end{item}
+\begin{item}
+The \emph{units of atomic weight} are two-fold, with an identical numerical value. They are g/mole of atoms (or just g/mol) or amu/atom.
+\end{item}
+\begin{item}
+\emph{Percentage discrepancy} between an accepted (literature) value and an experimental value is
+\begin{equation*}
+\frac{\mathrm{experimental\;result} - \mathrm{accepted\;result}}{\mathrm{accepted\;result}}
+\end{equation*}
+\end{item}
+\end{enumerate}
+%------------------
+%	BIBLIOGRAPHY
+%------------------
+\bibliographystyle{apalike}
+\bibliography{recursos}
+%------------------
+\end{document}

@@ -1,4 +1,4 @@
-![Programming](http://renderguild.com/vim/colors/trogdor.png)
+![Programming](https://i.ytimg.com/vi/GqnyBXFn0u4/maxresdefault.jpg)
 # Digital Electronics Lab UTP IS773
 This repository aims to keep a copy of my code, and reports for the Laboratory of Digital Electronics
 given by Ramiro Andres Barrios Valencia (ramiro@sirius.utp.edu.co)

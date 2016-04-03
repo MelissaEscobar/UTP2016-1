@@ -4,3 +4,4 @@ Contains Homeworks, Codes of Various Courses taken at Universidad Tecnologica de
 - Statistics
 - Computer Programming 2
 - Digital Electronics Laboratory
+- Physics III Laboratory

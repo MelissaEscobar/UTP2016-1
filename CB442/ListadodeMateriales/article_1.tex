@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper,titlepage]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, fouriernc, mathtools}
+\usepackage{microtype} %improves the spacing between words and letters	
+\usepackage{graphicx}
+\graphicspath{ {./pics/} {./eps/}}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[normalem]{ulem}		%Requirements for tables
+\useunder{\uline}{\ul}{}		% Lines in tables
+\usepackage{float}										% Image will be in the same place as you want.!!! x-/
+
+
+% COLOR DEFINITIONS
+\usepackage[svgnames]{xcolor} % Enabling mixing colors and color's call by 'svgnames'
+\definecolor{MyColor1}{rgb}{0.2,0.4,0.6} %mix personal color
+%Renames Commands
+\newcommand{\textb}{\color{Black} \usefont{OT1}{lmss}{m}{n}}
+\newcommand{\blue}{\color{MyColor1} \usefont{OT1}{lmss}{m}{n}}
+\newcommand{\blueb}{\color{MyColor1} \usefont{OT1}{lmss}{b}{n}}
+\newcommand{\red}{\color{LightCoral} \usefont{OT1}{lmss}{m}{n}}
+\newcommand{\green}{\color{Turquoise} \usefont{OT1}{lmss}{m}{n}}
+
+%% FONTS AND COLORS
+\usepackage{titlesec}
+\usepackage{sectsty}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%set section/subsections HEADINGS font and color
+\sectionfont{\color{MyColor1}}  % sets colour of sections
+\subsectionfont{\color{MyColor1}}  % sets colour of sections
+
+%set section enumerator to arabic number (see footnotes markings alternatives)
+\renewcommand\thesection{\arabic{section}.} %define sections numbering
+\renewcommand\thesubsection{\thesection\arabic{subsection}} %subsec.num.
+
+%define new section style
+\newcommand{\mysection}{
+\titleformat{\section} [runin] {\usefont{OT1}{lmss}{b}{n}\color{MyColor1}} 
+{\thesection} {3pt} {} } 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		CAPTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption}
+\usepackage{subcaption}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup[figure]{labelfont={color=Turquoise}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		!!!EQUATION (ARRAY) --> USING ALIGN INSTEAD
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%using amsmath package to redefine eq. numeration (1.1, 1.2, ...) 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\theequation}{\thesection\arabic{equation}}
+
+%set box background to grey in align environment 
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\patchcmd{\@Aboxed}{\boxed{#1#2}}{\colorbox{black!15}{$#1#2$}}{}{}%
+\patchcmd{\@boxed}{\boxed{#1#2}}{\colorbox{black!15}{$#1#2$}}{}{}%
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DESIGN CIRCUITS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[siunitx, american, smartlabels, cute inductors, europeanvoltages]{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeatletter
+\let\reftagform@=\tagform@
+\def\tagform@#1{\maketag@@@{(\ignorespaces\textcolor{red}{#1}\unskip\@@italiccorr)}}
+\renewcommand{\eqref}[1]{\textup{\reftagform@{\ref{#1}}}}
+\makeatother
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}
+\title{\blue Listado de Componentes Electrónicos  }
+%\blueb Pereira Security Team}
+\author{Héctor F. Jiménez Saldarriaga}
+\date{Marzo 2016}
+%%%
+\begin{document}
+\maketitle
+\section{Listado}
+Las siguientes tablas, son la lista de algunas de los componentes que poseo y podríamos usar en proyectos, mi idea es poder aprender algo mas, dado que mi estilo de aprendizaje es más practico llendo de la mano de la teoría. Por cuestiones de tiempo todo proyecto que se realiza debe tener un tiempo máximo y si hay mas personas en los desarrollos sera mucho mejor dado que es posible realizar una retro alimentación entre los pares que realicen el proyecto y crecer de forma exponencial.
+\begin{table}[H]
+\centering
+\begin{tabular}{cl}
+\hline
+\multicolumn{1}{l}{Cantidad} & Descripcion                                            \\ \hline
+\multicolumn{1}{|c|}{5}      & \multicolumn{1}{l|}{Ventiladores @12V,0.15A}           \\ \hline
+\multicolumn{1}{|c|}{2}      & \multicolumn{1}{l|}{Paneles Solares DBP29060 @3v}      \\ \hline
+\multicolumn{1}{|c|}{40}     & \multicolumn{1}{l|}{Leds 5mm Blanco, Blanco Intenso}   \\ \hline
+\multicolumn{1}{|c|}{200}    & \multicolumn{1}{l|}{Leds 5mm Naranja Intenso}          \\ \hline
+\multicolumn{1}{|c|}{200}    & \multicolumn{1}{l|}{Leds 5mm Verde Lima Intenso}       \\ \hline
+\multicolumn{1}{|c|}{50}    & \multicolumn{1}{l|}{Cables Tipo Pin M-M,H-M, H-H}      \\ \hline
+\multicolumn{1}{|c|}{40}     & \multicolumn{1}{l|}{Leds Mezcla 5mm}                   \\ \hline
+\multicolumn{1}{|c|}{10}     & \multicolumn{1}{l|}{Leds 3mm Ovales, Azul Agua Marina} \\ \hline
+\multicolumn{1}{|c|}{40}     & \multicolumn{1}{l|}{Leds 5mm @100mA, Azul Intenso}     \\ \hline
+\multicolumn{1}{|c|}{40}     & \multicolumn{1}{l|}{Leds 5mm @100mA, Rojo Intenso}     \\ \hline
+\multicolumn{1}{|c|}{4}      & \multicolumn{1}{l|}{Leds Alta Potencia @12V 500-700mA} \\ \hline
+\end{tabular}
+\caption{Tabla de Componentes Electrónicos, Leds. Tempmin=40, Tempmax=70 @2.8V}
+\label{tabladeleds}
+\end{table}
+
+Se poseen sensores varios que no se encuentran incluidos en las tablas de abajo ,hay de presion, Lm35 de temperaturas, de ultrasonido
+
+\begin{table}[H]
+\begin{tabular}{|c|l|}
+\hline
+\multicolumn{1}{|l|}{Cantidad} & \multicolumn{1}{c|}{Descripcion}                                  \\ \hline
+6                              & Reguladores de Tension LM1117 ADJ, T92                            \\ \hline
+1                              & Programador Pickit 3 Incircuit Debugger, Usb +Cable +Instructivos \\ \hline
+Varios                         & DS1307,LF39,LM339,MAX232                                          \\ \hline
+3                              & Protoboard Adhesiva De 830 Puntos - 16.5cm X 5.5cm                \\ \hline
+1                              & Cargador/Balanceador Lipro Balance Charger 50W@5A                 \\ \hline
+3                              & Bateria Kingmax 1500mAh, @11.1V                                   \\ \hline
+3                              & Servomotores Hitech HS422 Deluxe                                  \\ \hline
+1                              & Servomotor Hitech HS 645MG Ultra Torque                           \\ \hline
+1                              & Servomotor Hitech HB 755 Qua                                      \\ \hline
+1                              & Joystick Extreme 3d Pro                                           \\ \hline
+1                              & Rfid Reader Module, Grand Idea Studio                             \\ \hline
+2                              & Arduino Mega, Original from Arduino                               \\ \hline
+2                              & Modulos de Transmision Bluetooth                                  \\ \hline
+2                              & Trasnceivers nRF24L01                                             \\ \hline
+\end{tabular}
+\caption{Tabla de Elementos Varios.}
+\label{Elementos Varios.}
+\end{table}
+
+Se debe mencionar que los servomotores se encuentran montados en una base de acrílico, formando un brazo que fue mi proyecto de grado de mi carrera de tecnología \footnote{http://repositorio.utp.edu.co/dspace/bitstream/11059/4777/1/629892G463.pdf, pagina 100 a 102} también he adjuntado el documento solo en caso de que el link en la cita no funcione.
+
+\end{document}

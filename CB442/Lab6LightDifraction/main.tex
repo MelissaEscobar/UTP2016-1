@@ -1,0 +1,138 @@
+%Quick Latex Template.
+%Homeworks and reports. UTP-2016
+%feedback:hfjimenez@utp.edu.co
+\documentclass{article}									%Document class.
+\usepackage[utf8]{inputenc}								%Tildes.
+\usepackage{gensymb}		
+\usepackage{graphicx}									%Images in the paper.
+\usepackage{authblk}						
+\usepackage{float}										% Image will be in the same place as you want.!!! x-/
+
+\title{Laboratorio 6. Difracción de la Luz}
+\author[1]{Carlos Alberto Dagua Conda\thanks{carlosdaguaco@utp.edu.co}}
+\author[2]{Héctor F. Jiménez Saldarriaga\thanks{hfjimenez@utp.edu.co}}
+\author[2]{Juan Camilo Castrillon\thanks{jucacastrillon@utp.edu.co}}
+\affil[1]{Ingeniería Física }
+\affil[2]{Ingeniería de Sistemas y Computación}
+\affil{Universidad Tecnológica de Pereira}
+\renewcommand\Authands{ and}
+\date{Marzo 2016}
+\begin{document}
+\maketitle
+
+\section{Abstract}
+In this paper we study experimentally the phenomena of Fraunhofer diffraction. In optics, the Fraunhofer diffraction equation is used to model the diffraction of waves when the diffraction pattern is viewed at a considerable distance from the diffracting object, for this we have use different  apertures, rectangulars, double and multiple apertures.
+\section{Introducción}
+En esta práctica experimental analizamos el fenómeno de la difracción de la luz, que se presenta cuando una onda interactúa con objetos cuyas dimensiones son comparables con su longitud de onda,  desde el punto de vista de la teoría se considera que la luz es fenómeno completamente ondulatorio.\\
+ $$\\$$
+Utilizando un haz de luz de láser helio león de estado Sólido con una longitud de onda 650\textit{nm} para incidir sobre rejillas rectangulares, dobles y múltiples, obteniendo unos patrones de difracción, para los cuales tomamos las distancias entre el máximo central y los mínimos adyacentes presentados en el software de la Xplorer GLX. Para la práctica se utilizó:
+Laser de Estado Solido $$\lambda =650nm$$
+\begin{itemize}
+\item Rendijas rectangulares sencillas.
+\item Rendijas rectangulares dobles y múltiples.
+\item Xplorer GLX para obtener los datos.
+\item Sensor de luz
+\item Sensor de traslación
+\item Rejilla colimadora
+\end{itemize}
+En la difracción de \textbf{Fraunhofer} se supone que las ondas incidentes al objeto son planas al igual que las ondas emergentes del mismo. La distancia entre el objeto y la pantalla sobre la cual se observa el patrón, debe ser grande comparada con las dimensiones del objeto
+
+\section{ Difracción de la Luz}
+Explicaciones. Aqui.
+\subsection{Análisis}
+Experimentalmente para los ejercicios se tomaron 10 medidas, con un recorrido del sensor de no mas de 10 segundos. 
+como se puede notar en la tabla \ref{table:1},\ref{table:2},\ref{table:3} se presentan los puntos tomados del software .\\
+\subsubsection{Difracción de Fraunhofer por una rendija rectangular}
+$$bsen\theta =\lambda m\quad \quad m=1,2,3,…,n$$
+Donde: b es el ancho de la rendija, " es la separación angular entre el centro del máximo central y el centro de los mínimos observados, m es el orden del patrón de difracción para mínimos de intensidad y ! es la longitud de onda de la luz incidente.
+\subsubsection{Difracción de Fraunhofer por una rendija doble}
+$$dsen\theta =\lambda m\quad \quad m=1,2,3,…,n$$
+Donde: \texttt{d} es la distancia entre las dos rendijas, $$\theta$$ es la separación angular entre el máximo de interferencia central y los máximos secundarios, m es el orden del patrón de difracción para los \texttt{bf} máximos de interferencia y la longitud de onda de la luz.
+\\
+En la difracción de Fraunhofer se supone que las ondas incidentes al objeto son planas o paralelas al igual que las ondas emergentes al mismo. La distancia entre el objeto y la pantalla sobre la cual se observa el patrón debe ser grande en comparación con las dimensiones del objeto.
+La difracción de Fresnel tiene lugar cuando la fuente puntual de las ondas incidentes o el punto de observación desde el cual se los ve a ambos están a una distancia finita del objeto.
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+Coordenadas &  Punto\\ 
+ \hline
+(0.178, 0.730) & máximo \\ 
+(0.170, -0.010) & mínimo\\ 
+(0.178, 0.730) & máximo \\
+(0.187, 0.0101) & mínimo\\
+(0.192, 0.03) & máximo \\
+(0.194, 0.03) & mínimo\\
+ \hline
+\end{tabular}
+\caption{ \emph{Datos medidos, Difracción por Rendija rectangular}}
+\label{table:1}
+\end{center}
+\end{table}
+\subsubsection{Difracción de Fraunhofer por una rendija doble}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+Coordenadas & Punto \\ 
+ \hline
+(0.181, 0.056) & máximo\\ 
+(0.184, 0.010) & mínimo\\
+(0.181, 0.056) & máximo\\
+(0.187, 0.031) & maximo\\
+(0.191, 0.046) & máximo\\
+(0.197, 0.026) & mínimo\\
+(0.174, 0.066) & máximo\\
+(0.180, 0.015) & mínimo\\
+ \hline
+\end{tabular}
+\caption{ \emph{Datos medidos,Difracción por Rendija doble}}
+\label{table:2}
+\end{center}
+\end{table}
+\subsubsection{Difracción de Fraunhofer por múltiples rendijas}
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+Coordenadas & Punto \\ 
+ \hline
+(0.173, 0.143) & máximo\\ 
+(0.176, 0.005) & mínimo\\
+(0.182, 0.117) & máximo\\ 
+(0.187, 0.015) & máximo\\ 
+(0.182, 0.117) & máximo\\
+(0.179, 0.459) & máximo\\ 
+(0.183, -0.010) & mínimo\\
+ \hline
+\end{tabular}
+\caption{ \emph{Datos tomados, Difracion por múltiples rendijas. }}
+\label{table:3}
+\end{center}
+\end{table}
+
+\subsection{Solución Preguntas}
+
+\subsection{Análisis}
+Utilizando un programa como el EXCEL, mida gráficamente las distancias entre el máximo central y mínimos a cada lado en el caso de difracción por una sola rendija. Para dos o mas rendijas mida la distancia entre el máximo central y los máximos y mínimos secundarios laterales.
+\subsubsection{hector}
+\textbf{Dejar mi espacio yo agrego mañana mi analisis y termino de revisar todos.}\\
+Con los datos obtenidos en el numeral 6.5.1 y con la ecuación 6.1. Encuentre el ancho de la rendija rectangular usada. Compare el valor obtenido con el proporcionado por el fabricante. Estime el error en la medida de b, teniendo en cuenta que b es función de  $\theta$.
+\subsubsection{camilo}
+Con los datos obtenidos en el numeral 6.5.2 y con las ecuaciones 6.1 y 6.2,
+encuentre la separación \textbf{d} y el ancho \textbf{b} para cada una de las rendijas dobles. Halle el error respectivo. Compare con los valores escritos en las rendijas.
+
+\subsubsection{carlos}
+Con los datos obtenidos en el numeral 6.5.3 y con la ecuaciones 6.1 y 6.3,
+encuentre el numero de rendijas y sus parámetros. Compare estos resultados con los proporcionados por el fabricante.
+%$\\$			%Espacios Forzados.
+%$\\$
+%$\\$
+%$\\$
+Para representar el error porcentual entre el \emph{Valor experimental} y el \emph{Valor esperado} tomado en la medida se sigue la siguiente ecuación:
+\begin{equation}
+    \% Error = \frac{|Valor \ esperado-Valor \ experimental|}{Valor esperado}*100\%
+\end{equation}
+
+\end{document}
+

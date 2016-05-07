@@ -1,0 +1,13 @@
+/*ENUNCIADOS
+
+1. Construir una función que permita leer una cadena de caracteres numéricos que representan un número entero y convertirla al número entero correspondiente
+2. Construir una función que permita leer una cadena de caracteres numéricos que representan un número real y convertirla al número real correspondiente
+3. Construir una función que permita leer una cadena de caracteres numéricos que representa un número entero y calcular la suma de sus dígitos
+4. Construir una función que permita leer una cadena de caracteres numéricos que representa un número entero y determinar si el número es par
+5. Construir una función que permita leer una cadena de caracteres numéricos que representa un número entero y determinar si el número es primo
+6. Construir una función que reciba dos cadenas de caracteres numéricos que representan números enteros y calcular la suma de dichos números (los números pueden ser de cualquier, CUALQUIER, longitud)
+7. Construir una función que reciba dos cadenas de caracteres numéricos que representan números enteros y calcular la resta de dichos números
+8. Construir una función que reciba dos cadenas de caracteres numéricos que representan números enteros y calcular el producto de ambos números
+9. Construir una función que reciba dos cadenas de caracteres numéricos que representan números enteros y calcular el cociente de ambos números
+10. Construir una función que reciba una cadena de caracteres y que la reescriba encriptada, en pantalla debe aparecer la ecuación de encriptación
+*/

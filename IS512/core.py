@@ -83,26 +83,26 @@ def banner():
             feedback:hfjimenez@utp.edu.co
          %sUniversidad Tecnologica de Pereira, ISC%s
 """ % (bold, green, white, reset)
-elif target == 4:
-    print """%s%s
-    8""""8 8""""8
-    8    8 8    " eeeee e   e eeeee eeeee
-    8e   8 8e     8   8 8   8 8   " 8   "
-    88   8 88  ee 8eee8 8e  8 8eeee 8eeee
-    88   8 88   8 88  8 88  8    88    88
-    88eee8 88eee8 88  8 88ee8 8ee88 8ee88
-        feedback:hfjimenez@utp.edu.co
-     %sUniversidad Tecnologica de Pereira, ISC%s
+    elif target == 4:
+        print """%s%s
+        8""""8 8""""8
+        8    8 8    " eeeee e   e eeeee eeeee
+        8e   8 8e     8   8 8   8 8   " 8   "
+        88   8 88  ee 8eee8 8e  8 8eeee 8eeee
+        88   8 88   8 88  8 88  8    88    88
+        88eee8 88eee8 88  8 88ee8 8ee88 8ee88
+         feedback:hfjimenez@utp.edu.co
+        %sUniversidad Tecnologica de Pereira, ISC%s
 """ % (bold, green, white, reset)
-elif target == 5:
-    print """%s%s
-    @@@@@@@   @@@@@@@   @@@@@@  @@@  @@@  @@@@@@  @@@@@@
-    @@!  @@@ !@@       @@!  @@@ @@!  @@@ !@@     !@@
-    @!@  !@! !@! @!@!@ @!@!@!@! @!@  !@!  !@@!!   !@@!!
-    !!:  !!! :!!   !!: !!:  !!! !!:  !!!     !:!     !:!
-    :: :  :   :: :: :   :   : :  :.:: :  ::.: :  ::.: :
-        feedback:hfjimenez@utp.edu.co
-     %sUniversidad Tecnologica de Pereira, ISC%s
+    elif target == 5:
+        print """%s%s
+        @@@@@@@   @@@@@@@   @@@@@@  @@@  @@@  @@@@@@  @@@@@@
+        @@!  @@@ !@@       @@!  @@@ @@!  @@@ !@@     !@@
+        @!@  !@! !@! @!@!@ @!@!@!@! @!@  !@!  !@@!!   !@@!!
+        !!:  !!! :!!   !!: !!:  !!! !!:  !!!     !:!     !:!
+        :: :  :   :: :: :   :   : :  :.:: :  ::.: :  ::.: :
+         feedback:hfjimenez@utp.edu.co
+        %sUniversidad Tecnologica de Pereira, ISC%s
 """ % (bold, green, white, reset)
 
 #Taken from darkoperator's github: DnsRecon

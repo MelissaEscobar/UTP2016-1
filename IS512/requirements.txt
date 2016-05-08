@@ -1,0 +1,7 @@
+Recibir los dos valores mu, sigma, y calcular la probabilidad.
+Recibir dos intervalos X1...X2.
+Mostrar Graficas. 
+*Set de datos, y realizar todas las operaciones, varianza.
+Concluir con los datos.
+Diga .
+

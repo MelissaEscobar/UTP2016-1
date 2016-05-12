@@ -1,0 +1,124 @@
+  /$$$$$$   /$$                /$$             
+ /$$__  $$ | $$               | $$             
+| $$  \__//$$$$$$   /$$$$$$  /$$$$$$   /$$$$$$$
+|  $$$$$$|_  $$_/  |____  $$|_  $$_/  /$$_____/
+ \____  $$ | $$     /$$$$$$$  | $$   |  $$$$$$ 
+ /$$  \ $$ | $$ /$$/$$__  $$  | $$ /$$\____  $$
+|  $$$$$$/ |  $$$$/  $$$$$$$  |  $$$$//$$$$$$$/
+ \______/   \___/  \_______/   \___/ |_______/ 
+                                               
+	Estadistica con Python: PythonStatistics 101
+---------------
+Scipy Esta ordenado por subpaquetes de los diferentes
+ campos y dominios cientificos algunas 
+-
+Scipy: Python para Cientificos:
+Algunos 
+ *Special functions (scipy.special)
+ *Integration (scipy.integrate)
+ *Optimization (scipy.optimize)
+ *Interpolation (scipy.interpolate)
+ *Fourier Transforms (scipy.fftpack)
+ *Linear Algebra (scipy.linalg)
+ *Sparse Eigenvalue Problems with ARPACK
+ *Compressed Sparse Graph Routines (scipy.sparse.csgraph)
+ *Spatial data structures and algorithms (scipy.spatial)
+	···*Statistics (scipy.stats)··
+
+NOSOTROS NOS CENTRAREMOS EN EL USO DE SCIPY.STATS >>ESTADISTICA
+
+----------------
+El Stack de Scipy esta conformado por un conjunto de 6 librerias mas que conforman el Core ellas son:
+
+    Numpy:s the fundamental package for scientific computing in Python.
+    It is a Python library that provides a multidimensional array object,
+    various derived objects, fast operations with numbers.
+    
+		Scipy:(pronounced “Sigh Pie”) is open-source software for mathematics, science, and engineering.
+
+    Matplotlib:matplotlib is a library for making 2D plots of arrays
+    in Python. Although it has its origins in emulating the MATLAB®
+    [*] graphics commands
+
+    IPython:
+	  	Enhanced interactive Python shell
+			Interactive Parallel Computing 
+			Web Notebook Based Options: Bitacora, And multi support out support.
+
+    SymPy: library for symbolic mathematics.
+		Symbolic computation deals with the computation of mathematical 
+    objects symbolically. 
+    This means that the mathematical objects are represented exactly,
+    not approximately, and mathematical expressions 
+    with unevaluated variables are left in symbolic form.
+
+    Pandas:
+		Is a Python package providing fast, flexible, and expressive 
+		data structures designed to make working with “relational” or
+     “labeled” data both easy and intuitive. 
+    It aims to be the fundamental high-level 
+		building block for doing practical, 
+    real world data analysis in Python
+----------------
+
+El paquete de Estadistica tiene:
+This module contains a large number of probability
+distributions as well as a growing library of statistical functions.
+
+Algunas Son:
+	Multivariate distributions
+	Discrete distributions
+	Continuous distributions¶
+
+Tambien hay algunas funciones Estadisticas como:
+	kurtosis
+  Skee(Sesgo)
+  momentos n
+	varianza
+	Desviacion 
+	Mediana
+	Frecuencia Relativa
+	Histogramas
+  Calculo de erores
+-----------------
+Para nuestro Caso la Distribucion Normal Estandar
+una Distribucion Continua Soportado desde los inicios. 
+
+:::How to 101:::
+Como base debemos Importar lo minimo:
+
+>>> import numpy as np
+>>> import matplotlib as mpl
+>>> import matplotlib.pyplot as plt
+Ahora importamos tambien nuestro entorno 
+>>> import scipy.stats as st 
+Ahora es posible importar objetos o distribuciones individuales como :
+>>> import scipy.stats as norm #Importa la Distribucion Normal
+
+Si necesitamos saber que metodos, funciones soporta la distribucion(Clase) 
+es posible desplegar la ayuda asi :
+>>> print(stats.norm.__doc__)
+
+Los metodos comunes para todas las distribuciones son:
+    rvs: Random Variates
+    pdf: Probability Density Function
+    cdf: Cumulative Distribution Function
+    sf: Survival Function (1-CDF)
+    ppf: Percent Point Function (Inverse of CDF)
+    isf: Inverse Survival Function (Inverse of SF)
+    stats: Return mean, variance, (Fisher’s) skew, or (Fisher’s) kurtosis
+    moment: non-central moments of the distribution
+
+
+Si deseamos calcular el valor de una variable z
+>>> stats(loc=0, scale=1, moments='mv')	
+
+  Mean('m'), variance('v'), skew('s'), and/or kurtosis('k').
+Referencias:
+
+[1]:http://docs.scipy.org/doc/scipy/reference/stats.html
+[2]:http://docs.scipy.org/doc/scipy/reference/tutorial/stats.html
+
+
+                                               
+

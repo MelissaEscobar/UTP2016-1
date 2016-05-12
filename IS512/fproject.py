@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #Project Details: This file is part of the final project of statistics
 #Team members : Eliana Osorio, Sebastian Idarraga, Hector F. Jimenez
@@ -61,7 +61,6 @@ st.norm.cdf(z)                              #Esto era lo que se pedia.
 st.norm.pdf(x, -1.0, np.sqrt(sigma))        #Esto era lo que se pedia entregar.
 
 #Eejmplo para graficar
-
 x2=np.linspace(0.0, 1.0 )
 plt.plot(x2,dsnormal.pdf(x2,-1.0, np.sqrt(0.5)) )
 plt.show()

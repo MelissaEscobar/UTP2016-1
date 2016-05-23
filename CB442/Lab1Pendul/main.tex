@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+
+
+\title{Laboratorio 1. Péndulo físico}
+\author{Carlos Alberto Dagua Conda, Hector Fabio Jimenez Saldarriaga, \\Juan Camilo Castrillón,\thanks{carlosdaguaco@utp.edu.co, hfjimenez@utp.edu.co, jucacastrillon@utp.edu.co} }
+
+\date{Marzo 2016}
+
+\begin{document}
+
+\maketitle
+
+\section{Abstract}
+In this paper we study the motion of a rigid body which can oscillate freely about an axis when it is separated from its center of mass is dropped and studied. Ten facts at different distances from the center of mass of the object were taken and we will have to find their behavior.
+
+
+\section{Introducción}
+El péndulo físico es un sistema con un solo grado de libertad; el correspondiente a la rotación alrededor del eje fijo. La posición del péndulo físico queda determinada, en cualquier instante, por el ángulo $\theta$ que forma el plano determinado por el eje de rotación y el centro de gravedad $(G)$ del péndulo con el plano vertical que pasa por el eje de rotación.
+$\\$
+En esta práctica tomaremos múltiples muestras de periodos a distintas alturas del centro de masa $CM$ de un objeto rígido que oscilará. Dichas muestras se tomaran en ambos lados del centro de masa, gracias a estos datos podremos obtener una gráfica con la cual podremos interpretar múltiples características de este movimiento y podremos observar de una manera más explícita la propiedad de reversibilidad que se mencionan en las guías de laboratorio.
+
+\section{Análisis}
+\subsection{} 
+Con los datos tomados construya una gráfica en papel milimetrado del periodo $T$ (valor medio de cada grupo de periodos $T$ tomados en el numeral $3$ del paso $1.6$) en función de la distancia al centro de masa $(CM)$, $h$. Tome el origen de coordenadas como el centro de masa. Trace la curva correspondiente. Utilice las escalas adecuadas.
+$\\$
+\emph{NOTA}:
+La gráfica se construyó en papel milimetrado y se presenta en el laboratorio como un anexo.
+
+\subsection{}
+A partir del gráfico obtenido: ¿ Se presenta algún tipo de simetría con relación a alguna línea?.
+
+\subsubsection{Solución}
+Se presenta una simetría con respecto al eje $Y$, en el cual observamos que en dicha gráfica en el momento de que la función se acerca a $X=0$ esta función se encuentra con una línea asíntota perpendicular al eje $X$.
+
+\subsection{}
+¿ Cuál es el período del péndulo cuando $h = 0$?. Explique su significado.
+\subsubsection{Solución}
+Experimentalmente evidenciamos que al ubicar la varilla en el centro de masa $(h0)$, no hay oscilación, o sea, este valor de período tiende al infinito y lo comprobamos en el gráfico anterior cuando vemos que cuando se acerca  al centro de masa por la derecha y por la izquierda el valor del período aumenta cada vez en mayor proporción.
+$\\$
+Teóricamente la fórmula para calcular el periodo del péndulo físico es:
+
+\begin{equation}
+    T=2\pi\sqrt{\frac{k_{0}+h^{2}}{gh}}
+\end{equation}
+
+Si se quiere hallar el período en $h = 0$, se reemplazan los datos y se obtiene matemáticamente una indeterminación; lo que quiere decir que cuando el punto de suspensión coincide con el centro de masa, el periodo tiende a infinito.
+
+\subsection{}
+Obtenga de su gráfico el período mínimo con el cual este péndulo puede vibrar.
+\subsubsection{Solución}
+Dado el grafico que se obtuvo con las muestras del laboratorio y tras graficar el comportamiento de dichas muestras , podemos observar que hay un minimo $P$ y un minimo $P'$ los cuales  representan el periodo minimo en el cual este péndulo puede vibrar $h=30cm$ y $T=1.53146 seg$ para un extremo de la barra y $h=-30 cm$ y $T=1.52908 seg$, por lo cual tomaremos un valor intermedio el cual será el $T$ que deseamos encontrar 
+
+\begin{equation}
+    T_{prom}=\frac{(T+T')}{2}=\frac{(1.53146+1.52908)}{2}=\frac{3.06054}{2}=1.53027
+\end{equation}
+
+\begin{equation}
+    T_{prom}=1.53027
+\end{equation}
+
+\subsection{}
+De la masa del péndulo y su radio de giro $K_{0}$ determinado de la gráfica, encuentre $I_{0}$ el momento de inercia rotacional alrededor del $C.M$.
+\subsubsection{Solución}
+Masa $(M)$
+\begin{equation}
+    M=950.5\ gr\Longrightarrow \ \ M=0.9905 \ kg
+\end{equation}
+
+Radio de giro $(K_{0})$ \emph{(se obtuvo de manera gráfica)}
+\begin{equation}
+    K_{0}=30 \ cm \Longrightarrow \ \ K_{0}=0.30 \ cm
+\end{equation}
+
+Utilizando el teorema de los ejes paralelos obtenemos la formula:
+\begin{equation}
+    I_{A}=I_{0}+Mh^{2}
+\end{equation}
+
+Donde $I_{0}$ es el momento de inercia respecto a un eje que pasa por el centro de masa $CM$.
+$\\$
+Por Definicion: 
+\begin{equation}
+    I_{0}=K_{0}^{2}
+\end{equation}
+
+Siendo $K_{0}$ el radio de giro que obtuvimos de la gráfica 
+\begin{equation}
+    I_{0}=(0.9905) (0.3)^2
+\end{equation}
+
+\begin{equation}
+    I_{0}=0.089145\ kg m^2
+\end{equation}
+
+\subsection{}
+Trace una recta paralela al eje horizontal de su gráfico para un período mayor al mínimo $T_{0}$. Halle las parejas de cortes $(h_{1}, h_{2})$ y $(h^{'}_{1},h^{'}_{2})$. Del correspondiente
+período $T$ determinado por esta recta y la longitud $L$ correspondiente al péndulo simple equivalente dado por $L = h_{1}+h_{2}$ y también por $L = h^{'}_{1}+h^{'}_{2}$, calcule el valor de la gravedad, por medio de la ecuación $(1.7)$. Compárelo con su valor aceptado para Pereira y calcule el error porcentual (\%).
+\subsubsection{Solución}
+
+
+\begin{equation}
+    h_{1}=0.25m \ \ \ \ \ \ h_{2}=0.35m
+\end{equation}
+
+\begin{equation}
+    h^{'}_{1}=0.25m \ \ \ \ \ \ h^{'}_{2}=0.35m
+\end{equation}
+
+\begin{equation*}
+    L=h_{1}+h_{2}=(0.25+0.35)m 
+\end{equation*}
+\begin{equation}
+    L=0.60m
+\end{equation}
+
+
+\begin{equation*}
+    L=h^{'}_{1}+h^{'}_{2}=(0.25+0.35)m 
+\end{equation*}
+\begin{equation}
+    L=0.60m
+\end{equation}
+
+\begin{equation*}
+    g=\frac{4\pi^{2}L}{T^{2}}=\frac{4\pi^{2}0.60m}{(1.53027seg)^{2}}
+\end{equation*}
+\begin{equation}
+    g=10.1152 \frac{m}{seg^{2}} 
+\end{equation}
+
+\begin{equation}
+    \% Error = \frac{|Valor \ esperado-Valor \ experimental|}{Valor esperado}*100\%
+\end{equation}
+
+\begin{equation*}
+    \% Error =\frac{|9.76-10.1152|}{10.1152}*100\%
+\end{equation*}
+
+\begin{equation}
+    \% Error =3.5115 \%
+\end{equation}
+
+\subsection{}
+A partir de la escala con la cual trazó su gráfico, determine un valor aproximado para la incertidumbre de su medida para la gravedad
+\subsubsection{Solución}
+Incertidumbre relativa
+\begin{equation}
+    g=10.1152\pm 0.12 \ \frac{m}{seg^{2}}
+\end{equation}
+
+
+\section{Conclusiones}
+De este experimento se puede concluir lo siguiente:
+$\\$
+$\\$
+\emph{1}.	Se presentaron diferencias en los datos tomados en el laboratorio con respecto a los valores teóricos ya que el factor humano estuvo presente en la toma de datos.
+$\\$
+$\\$
+\emph{2}.	Observamos la propiedad de reversibilidad de una manera gráfica.
+$\\$
+$\\$
+\emph{3}.	Se demostró que es posible obtener un valor estimado de la gravedad mediante este experimento.
+$\\$
+$\\$
+\emph{4}.	Este experimento funciona bajo un ángulo theta menor o igual a $15$ grados.
+$\\$
+$\\$
+\emph{5}.	Gráficamente se pudo observar que en este péndulo físico al cumplirse la propiedad de reversibilidad podremos encontrar dos periodos mínimos en el cual el péndulo puede vibrar. 
+
+\section{Bibliografía}
+[1] FISHBANE, Paul y otros. Física para ciencias e ingeniería, Volumen I. Prentice Hall, 1994.
+$\\$
+[2] SERWAY, Taymond. Física Tomo I, Cuarta edición. Mc Graw Hill, 1997.
+
+
+
+\end{document}

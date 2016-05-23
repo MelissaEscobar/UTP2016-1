@@ -1,7 +1,19 @@
+"""
+NOTA:Comentarios seran en ingles/Español.
+Se debe usar scipy y modulo stats ya que viene con numerosas distribuciones de
+probabilidad.
+
+Todas las distribuciones continuas estan definidas en funcion de dos
+parametros :
+    -loc:: Es la media, centro de distribucion.
+    -scale:: Es la desviacion tipica Sigma.
+    para calcular el valor de X se asumio que se da el primer valor izquierdo
+
+"""
+
 Recibir los dos valores mu, sigma, y calcular la probabilidad.
 Recibir dos intervalos X1...X2.
 Mostrar Graficas. 
-*Set de datos, y realizar todas las operaciones, varianza.
+Set de datos, y realizar todas las operaciones, varianza.
 Concluir con los datos.
-Diga .
 

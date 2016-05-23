@@ -20,23 +20,10 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-"""
-NOTA:Comentarios seran en ingles/Español.
-Se debe usar scipy y modulo stats ya que viene con numerosas distribuciones de
-probabilidad.
-
-Todas las distribuciones continuas estan definidas en funcion de dos
-parametros :
-    -loc:: Es la media, centro de distribucion.
-    -scale:: Es la desviacion tipica Sigma.
-
-"""
-
 import os, sys, subprocess
 import string
 import random
 import time
-
 import numpy as np
 import scipy.stats as st
 import matplotlib.mlab as mlab
@@ -45,7 +32,8 @@ import core as core
 
 # Location for logs, modules and storage
 ActivityLog = ("Logs")
-# Pretty colors
+
+# Xterm Colors
 reset = '\x1b[0m'    # reset all colors to white on black
 bold = '\x1b[1m'     # enable bold text
 uline = '\x1b[4m'    # enable underlined text
@@ -57,36 +45,143 @@ blue = '\x1b[34m'    # blue text
 cyan = '\x1b[36m'    # cyan text
 white = '\x1b[37m'   # white text (use reset unless it's only temporary)
 warning = "%s[!]%s" % (red, reset)
-info = "%s[*]%s" % (green, reset)
+info = "%s[*]%s" 		% (green, reset)
 version="1.0"				#Version of this Statistics Software
 
-# catch for ctrl+c so we can exit smoothly
 def signalHandler(signal, frame):
-    warning("Ctrl-C caught, Shutting down now!")
+    warning("Ctrl-C Para cerrar !")
     logging.info("[!] Ctrl+C signal caught. Shutting down Intersect!")
     
 def menu():
-	print """Elija Opcion para usar Distribucion Normal (DN):
-	[>1] Grafica de DN Aleatoria 		
-	[>2] Hallar Z de X dado(s) 
+	print """Elija Opcion para usar Distribucion Normal Estandar:
+	[>1] Grafica de DNT Aleatoria 		
+	[>2] Hallar Probabilidad (Z) de X dado(s) 
 	[>3] Obtencion de Parametros de una DN
-	[>4] Niveles de Confianza
+	[>4] Obtener valores de X1,X2 dado un Z.
 	[>5] Acerca de  
 	[>6] Quit
 	"""
+
+def usage():	
+	print("%s%s[!!]Las Entradas deben ser numericas entre [1-6]%s")%(bold,red,reset)
+	print("%s%s[!!]Corre el Script de Nuevo, o verifica los requisitos%s")%(bold,red,reset)
+
+
+def operative(x):			#This is pretty straight forward work
+	if x==1:
+		DntRandom()				#Done
+	elif x==2:
+		Xz()							#Done
+	elif x==3:
+		Params()					#Falta
+	elif x==4:
+		Zx()							#Z to x, Done x= mu + (z)*sigma 
+	elif x==5:
+		acercade()				#Done
+	elif x==6:
+		quit()						#Exit
+		
+def DntRandom():
+		print("%s%s[+]%sIngrese la Media y La Desviacion Estandar%s: %s")%(bold,green,nobold,bold,reset)
+		mu = input("mu >:")
+		sigma = input("sigma >: ") 
+		time.sleep(2)
+		print("%s%s>:[Ok]%s%sGenerando set de valores Aleatorios para x..%s")%(bold,red,nobold,green,reset)
+		x = mu + sigma * np.random.randn(10000)	#Aseguraos la inclusion de los mu, sigma 
+		print(x)
+		num_bins = 50
+		# datos para graficar el histograma.
+		print("%s%s>:[Ok]%s%sGenerando Histograma de MatplotLib..%s")%(bold,red,nobold,green,reset)
+		time.sleep(2)
+		n, bins, patches = plt.hist(x, num_bins, normed=1, facecolor='green', alpha=0.5)
+	  # para agregar la mejor linea
+		print("%s%s>:[Ok]%s%sCalculando las Probabilidades para Construir Campana..%s")%(bold,red,nobold,green,reset)
+		time.sleep(2)
+		y = mlab.normpdf(bins, mu, sigma)									#Calculo de los z
+		print("%s%s>:[Ok]%s%sGraficando Datos%s")%(bold,red,nobold,green,reset)
+		time.sleep(1.2)
+		plt.plot(bins, y, 'r*')
+		plt.xlabel('X')
+		plt.ylabel('Y: Probabilidad')
+		plt.title(r'Distribucion Normal:  $\mu=$ %s , $\sigma=$ %s' %(str(mu),str(sigma)))
+		# Espaciado para las mejores Curvas. 
+		plt.subplots_adjust(left=0.15)
+		plt.show()
+
+def Xz():
+		print("%s%s[+]%sCantidad de Z a Hallar%s: %s")%(bold,green,nobold,bold,reset)
+		nz = input(">:")
+		for i in range(1,nz):
+			print(" >:[+]Ingrese el X%d")%(i)
+			y=input();
+			z=st.norm.cdf(y)
+			print("Busqueda de  Z%d en Tabla es= %s%s%f%s")%(i,bold,green,z,reset)		
+			p=st.norm.pdf(y)
+			print("Densidad de Probabilidad de Z%d= %s%s%f%s")%(i,bold,green,p,reset)		
+			
+def Zx():
+		print("%s%s[+]%sIngrese la Media, La Desviacion Estandar y la Probabilidad Z%s: %s")%(bold,green,nobold,bold,reset)
+		mu = input("mu >:")
+		sigma = input("sigma >: ") 
+		z=input("Z >: ")
+		print("Calculando los valores X...")
+		time.sleep(2)
+		x=mu+(z*sigma)
+		print("%s%s[+]El X Obtenido es: %f%s")%(bold,green,x,reset)
+		
+		
+def Params():
+		print("")
+			
+		
+def acercade():
+		subprocess.call(['clear'],shell=False)#clean term 
+		print"""%s%s
+		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		@@@@@@@     @@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@
+		@@@@@@#  ;@@@@@@@@@@@@@@@@@@@@@@@@+   @@@@@@@@@
+		@@@@@@. ;@@@@@@@@@#      ,@ ,@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@@,  ,##,    @@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@#  @@@@@@  .@@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@  @@@@@@;   @@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@ '@@@@@# ;' #@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@: @@@@@@ .@@ :@@@@@@@  @@@@@@@@@
+		@@@@@@+ @@@@@@@` @@@@@ `@@@ `@@@@@@@`  @@@@@@@
+		@@@    @@@@@@@@  @@@@  @@@@  @@@@@@@@.   @@@@@@
+		@@@    ;@@@@@@@. @@@  @@@@@ .@@@@@@@@    @@@@@@
+		@@@@@@  @@@@@@@; @@  @@@@@@ '@@@@@@@  '@@@@@@@@
+		@@@@@@  @@@@@@@@ .  @@@@@@` @@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@   @@@@@@@  @@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@;  #@@@@@  @@@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@@ ,        @@@@@@@@@@  @@@@@@@@@
+		@@@@@@  @@@@@@@ `@@`    :@@@@@@@@@@@  @@@@@@@@@
+		@@@@@@. ;@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@
+		@@@@@@#  ;@@@@@@@@@@@@@@@@@@@@@@@@+   @@@@@@@@@
+		@@@@@@@`    @@@@@@@@@@@@@@@@@@@@@    @@@@@@@@@@
+		@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	%s		Hector F. Jimenez Saldarriaga
+				Eliana Osorio 
+			Juan Esteban Idarraga
+		Software Estadistica: Distribucion Normal T.
+		Version 1.0%s
+									"""% (white,bold,white,reset)
+
+def quit():
+		sys.exit();
 	
+
 # Random Banner 
 def banner():
     target = random.randrange(1,6)
     if target == 1:
         print """%s%s
-        ######   #####
-        #     # #     #   ##   #    #  ####   ####
-        #     # #        #  #  #    # #      #
-        #     # #  #### #    # #    #  ####   ####
-        #     # #     # ###### #    #      #      #
-        #     # #     # #    # #    # #    # #    #
-        ######   #####  #    #  ####   ####   ####
+       #######   #####
+       ##     # #     #   ##   #    #  ####   ####
+       ##     # #        #  #  #    # #      #
+       ##     # #  #### #    # #    #  ####   ####
+       ##     # #     # ###### #    #      #      #
+       ######## #     # #    # #    # #    # #    #
+       #######   #####  #    #  ####   ####   ####
             feedback:hfjimenez@utp.edu.co%s
 		%sUniversidad Tecnologica de Pereira, ISC
 												%s
@@ -150,56 +245,3 @@ def banner():
          feedback:hfjimenez@utp.edu.co%s
         %sUniversidad Tecnologica de Pereira, ISC%s
 """ % (bold, red,version,white, reset)
-
-def usage():
-	print("%s%s[!!]Las Entradas deben ser numericas entre [1-6]%s")%(bold,red,reset)
-	print("%s%s[!!]Corre el Script de Nuevo, o verifica los requisitos%s")%(bold,red,reset)
-
-def operative(x):
-	if x==1:
-		one()
-	elif x==2:
-		two()
-	elif x==3:
-		tree()
-	elif x==4:
-		four()
-	elif x==5:
-		five()
-	elif x==6:
-		return 0
-		
-def one():
-		print("%s%s[+]%sIngrese la Media y La Desviacion Estandar%s: %s")%(bold,green,nobold,bold,reset)
-		mu = input("mu >:")
-		sigma = input("sigma >: ") 
-		time.sleep(2)
-		print("%s%s>:[Ok]%s%sGenerando set de valores Aleatorios para x..%s")%(bold,red,nobold,green,reset)
-		x = mu + sigma * np.random.randn(10000)	#Aseguraos la inclusion de los mu, sigma 
-		print(x)
-		num_bins = 50
-		# datos para graficar el histograma.
-		print("%s%s>:[Ok]%s%sGenerando Histograma de MatplotLib..%s")%(bold,red,nobold,green,reset)
-		time.sleep(2)
-		n, bins, patches = plt.hist(x, num_bins, normed=1, facecolor='green', alpha=0.5)
-		# para agregar la mejor linea
-		print("%s%s>:[Ok]%s%sCalculando las Probabilidades para Construir Campana..%s")%(bold,red,nobold,green,reset)
-		time.sleep(2)
-		y = mlab.normpdf(bins, mu, sigma)	#Calculo de los z
-		print("%s%s>:[Ok]%s%sGraficando Datos%s")%(bold,red,nobold,green,reset)
-		time.sleep(1.2)
-		plt.plot(bins, y, 'r**')
-		plt.xlabel('X')
-		plt.ylabel('Y: Probabilidad')
-		plt.title(r'Distribucion Normal:  $\mu=$ %s , $\sigma=$ %s' %(str(mu),str(sigma)))
-		# Espaciado para las mejores Curvas. 
-		plt.subplots_adjust(left=0.15)
-		plt.show()
-def two():
-		print("%s%s[+]%sCantidad de Z a Hallar%s: %s")%(bold,green,nobold,bold,reset)
-		nz = input(">:")
-		for i in range(1,nz):
-			print("Ingrese el X%d")%(i)
-			y=input();
-			z=st.norm.cdf(y)
-			print("Resultado Obtenido es Z%d: %f")%(i,z)			

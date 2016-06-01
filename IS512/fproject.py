@@ -26,14 +26,15 @@ import sys, subprocess
 #if __name__=='__main__':
                    #Print the banner
 while True:
-	subprocess.call(['clear'],shell=False)#clean term 
+	subprocess.call(['clear'],shell=False)#clean term
 	core.banner()													#Generate a Random banner
 	core.menu()														#Dmenu...
-	opcion=int(raw_input("[:::]> ")) 			#Casting the option entered by the user
-	if((opcion>6) or (opcion<1) ):				#Validator...break the infinite while cicle 
+	opcion=raw_input("[:::]> ") 									#Casting the option entered by the user
+	if(((opcion>'6') or (opcion<'1') ) and opcion!=''):				#Validator...break the infinite while cicle
 		core.usage();												#Print proper usage
 		raw_input();												#Wait for enter
 		break
-	core.operative(opcion)								#Do the homework :P 
-	raw_input();													#Debug 
-  
+	if (opcion!='\n'):
+		opcion=int(opcion)
+		core.operative(opcion)										#Do the homework :P
+		raw_input();	  											#Debug

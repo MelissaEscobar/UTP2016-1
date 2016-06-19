@@ -125,25 +125,26 @@ def Xz():
     print("La Densidad de Probabilidad es= %s%s%f%s")%(bold,green,densidad,reset)
 
 def Zx():
-    print("%s%s[+]%sIngrese la Media, La Desviacion Estandar y la Probabilidad Z%s: %s")%(bold,green,nobold,bold,reset)
-    mu = input("mu >:")
-    sigma = input("sigma >: ")
-    z=input("Z >: ")
-    var2=z/2
-    var3=0.5 + var2
-    var4=0.5 - var2
-    varix1=st.norm.cdf(varix1)
-    varix2=st.norm.cdf(varix2)
-    print("Calculando los valores X...%s", varix)
-    #time.sleep(2)
-    x1=mu+(varix1*sigma)
-    x2=mu+(varix2*sigma)
-    print("%s%s[+]El X2 Obtenido es: %f%s")%(bold,green,x1,reset)
-    print("%s%s[+]El X1 Obtenido es: %f%s")%(bold,green,x2,reset)
-
+	#funcion que dada una grafica representada por medio de una media(mu) y un desviacion tipica(sigma), permite saber entre que valores se encuentra un porcentaje de datos dado
+	mu = input("mu >:")
+	sigma = input("sigma >: ")
+	percent=input("porcentaje >: ")
+	Aux=percent/2
+	Z1=0.5 + Aux
+	Z2=0.5 - Aux
+	probZ1=st.norm.ppf(Z1)
+	probZ2=st.norm.ppf(Z2)
+	limitInferior=mu+(probZ1*sigma)
+	limitSuperior=mu+(probZ2*sigma)
+	print 'El '
+	print (percent) *100
+	print '% de los datos se encuentran entre'
+	print limitInferior
+	print ' y '
+	print limitSuperior
 
 def Params():
-		print("")
+		print("Not implemented yet.")
 
 
 def acercade():
